@@ -1,8 +1,7 @@
 ## Content
 
-* [[IntroductionToJmxTrans]]
-* [[ChangeLog]]
 * [[Installation]]
+* [[ChangeLog]]
 * [[Queries]]
 * ... [[MoreExamples]]
 * [[OutputWriters]]
