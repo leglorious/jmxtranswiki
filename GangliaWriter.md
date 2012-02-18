@@ -8,7 +8,7 @@ jmxtrans has a writer that connects to a gmond (not gmetad!) process and writes 
 
 ![ganglia](http://jmxtrans.googlecode.com/svn/wiki/ganglia.png)
 
-As described in the (borrowed) image above, you can see that jmxtrans is writing data to a gmond instance. Since I support host spoofing, whatever is set as ```host``` or optionally ```alias``` is what is sent to Ganglia as the host. Thus, jmxtrans is effectively acting like a gmond instance itself. This also means that jmxtrans doesn't have to run on the same machine as the gmond instance.
+As described in the (borrowed) image above, you can see that jmxtrans is writing data to a gmond instance. Since I support host spoofing, whatever is set as ```host``` or optionally ```alias``` is what is sent to Ganglia as the host. Thus, jmxtrans is effectively acting like a gmond instance itself. This also means that jmxtrans doesn't have to run on the same machine as the gmond instance.  Note that for proper host spoofing Ganglia compares both the name of the host and the IP address associated with it.  The GangliaWriter will attempt to resolve the address of the host (or alias) for you.  If this does not work you can correctly spoof Ganglia by providing an ```alias``` value in the form that it expects, specifically IP:hostname (e.g. "10.10.10.3:myhost").
 
 If there is demand, future versions of this plugin can support writing to multicast just like the other gmond instances do. That said, looking at Hadoop's support of Ganglia, it is just writing straight UDP, so I suspect this isn't going to be a high demand feature.
 
@@ -18,7 +18,7 @@ If there is demand, future versions of this plugin can support writing to multic
 {
   "servers" : [ {
     "host" : "w2",
-    "alias" : "w2.fullname.com",
+    "alias" : "10.0.3.16:w2.fullname.com",
     "port" : "1099",
     "queries" : [ {
       "obj" : "java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",
@@ -27,7 +27,11 @@ If there is demand, future versions of this plugin can support writing to multic
         "settings" : {
           "groupName" : "memory",
           "host" : "10.0.3.16",
-          "port" : 8649
+          "port" : 8649,
+          "slope" : "both",
+          "units" : "bytes",
+          "tmax" : 60,
+          "dmax" : 300
         }
       } ]
     } ]
@@ -35,8 +39,12 @@ If there is demand, future versions of this plugin can support writing to multic
 }
 ```
 
-Configuration attributes:
+GangliaWriter settings attributes:
 
   * *host* - The hostname for the machine running gmond.
   * *port* - The port that gmond is accepting UDP requests on.
   * *groupName* - How you want your graphs groups in the Ganglia interface.
+  * *slope* (*optional*) - the slope associated with the value(s) for this MBean: ZERO, POSITIVE, NEGATIVE, BOTH.  Defaults to BOTH if not specified.  This will apply to all values collected by this query.
+  * *units* (*optional*) - a String describing the expected units for this metric for display purposes.  Defaults to none.
+  * *tmax* (*optional*) - the maximum expected time (in seconds) between readings of this metric.  Defaults to 60.
+  * *dmax* (*optional*) - the maximum time (in seconds) that the value should be retained by the gmond instance in the absence of updates.  Defaults to 0, which means forever.
