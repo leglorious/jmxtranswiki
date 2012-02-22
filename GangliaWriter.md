@@ -42,8 +42,9 @@ If there is demand, future versions of this plugin can support writing to multic
 GangliaWriter settings attributes:
 
   * *host* - The hostname for the machine running gmond.
+  * *alias* (*optional*) - The spoofed hostname (see documentation above).
   * *port* - The port that gmond is accepting UDP requests on.
-  * *groupName* - How you want your graphs groups in the Ganglia interface.
+  * *groupName* - How you want your graphs grouped in the Ganglia interface.
   * *slope* (*optional*) - the slope associated with the value(s) for this MBean: ZERO, POSITIVE, NEGATIVE, BOTH.  Defaults to BOTH if not specified.  This will apply to all values collected by this query.
   * *units* (*optional*) - a String describing the expected units for this metric for display purposes.  Defaults to none.
   * *tmax* (*optional*) - the maximum expected time (in seconds) between readings of this metric.  Defaults to 60.
