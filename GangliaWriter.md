@@ -31,7 +31,8 @@ If there is demand, future versions of this plugin can support writing to multic
           "slope" : "both",
           "units" : "bytes",
           "tmax" : 60,
-          "dmax" : 300
+          "dmax" : 900,
+          "sendMetadata": 5
         }
       } ]
     } ]
@@ -45,7 +46,8 @@ GangliaWriter settings attributes:
   * *alias* (*optional*) - The spoofed hostname (see documentation above).
   * *port* - The port that gmond is accepting UDP requests on.
   * *groupName* - How you want your graphs grouped in the Ganglia interface.
-  * *slope* (*optional*) - the slope associated with the value(s) for this MBean: ZERO, POSITIVE, NEGATIVE, BOTH.  Defaults to BOTH if not specified.  This will apply to all values collected by this query.
-  * *units* (*optional*) - a String describing the expected units for this metric for display purposes.  Defaults to none.
-  * *tmax* (*optional*) - the maximum expected time (in seconds) between readings of this metric.  Defaults to 60.
-  * *dmax* (*optional*) - the maximum time (in seconds) that the value should be retained by the gmond instance in the absence of updates.  Defaults to 0, which means forever.
+  * *slope* (*optional*) - The slope associated with the value(s) for this MBean: ZERO, POSITIVE, NEGATIVE, BOTH.  Defaults to BOTH if not specified.  This will apply to all values collected by this query.
+  * *units* (*optional*) - A String describing the expected units for this metric for display purposes.  Defaults to none.
+  * *tmax* (*optional*) - The maximum expected time (in seconds) between readings of this metric.  Defaults to 60.
+  * *dmax* (*optional*) - The maximum time (in seconds) that the value should be retained by the gmond instance in the absence of updates.  Defaults to 0, which means forever.
+  * *sendMetadata* (*optional*) - Controls the frequency with which the metadata packets are sent. 1 would be send always, 2 send half the time, etc. Care should be taken to not let the metric get stale. Defaults to 30.
