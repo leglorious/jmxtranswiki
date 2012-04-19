@@ -66,3 +66,6 @@ If you want a different hostname to show up, use the ```alias``` configuration l
     "alias" : "w2.foo.com",
     "port" : "1099",
 ```
+
+## Alternative query definition using YAML
+Note that for setups with lots of reused queries, you might profit from using the YAML configuration format described in [[YAMLConfig]]. It allows to specify a query once and apply it to many hosts without repetition.
