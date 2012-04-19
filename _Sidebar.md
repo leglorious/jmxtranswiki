@@ -4,6 +4,7 @@
 * [[ChangeLog]]
 * [[Queries]]
 * ... [[MoreExamples]]
+* ... [[YAMLConfig]]
 * [[OutputWriters]]
 * ... [[StdoutWriter]]
 * ... [[GraphiteWriter]]
