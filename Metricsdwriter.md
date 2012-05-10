@@ -24,6 +24,7 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
 		"attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
 		"resultAlias": "heapUsage",
 		"metricsType": "gauge"
-	   }]
+	        }]
+        }]
 }
 ```
