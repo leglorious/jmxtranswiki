@@ -12,4 +12,5 @@
 * ... [[RRDToolWriter]]
 * ... [[RRDWriter]]
 * ... [[KeyOutWriter]]
+* ... [[MetricsdWriter]]
 * [[BestPractices]]
