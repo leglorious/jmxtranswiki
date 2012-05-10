@@ -3,7 +3,7 @@
 ## Metricsd Writer
 
 [Metricsd](https://github.com/mojodna/metricsd) is a metrics aggregator for Graphite that supports gauges, counters, histograms and meters.
-Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsage directly to graphite:
+Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsage directly to Metricsd:
 
 ```
    {
@@ -20,10 +20,10 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
 				    "rootPrefix": "jvm"
                                 }
                             }],
-                		"obj" : "java.lang:type=Memory",
-      "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
-                		"resultAlias": "heapUsage",
-                                "metricsType": "gauge"
+                	    "obj" : "java.lang:type=Memory",
+                            "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
+                	    "resultAlias": "heapUsage",
+                            "metricsType": "gauge"
                        }]
                 }
 ```
