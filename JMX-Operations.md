@@ -22,8 +22,8 @@ The following example JSON configuration monitors one JMX Operation "getLoggerLe
       "obj" : "java.util.logging:type=Logging",
       "attr" : [  ],
       "oper" : [ {
- 	      	"operation" : "getLoggerLevel",
-   		   	"parameters" : [ "global" ]
+ 	      	"method" : "getLoggerLevel",
+   		"parameters" : [ "global" ]
       	} ]
     } ],
     "numQueryThreads" : 2
