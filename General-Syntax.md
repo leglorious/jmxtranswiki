@@ -16,5 +16,6 @@
       "resultAlias"
       "keys"
       "outputWriters" - one or more output writers per query  
+         XXX - various writer dependent parameters
 ```
 
