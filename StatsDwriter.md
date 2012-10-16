@@ -4,7 +4,7 @@
 
 StatsD is a network daemon that runs on the Node.js platform and listens for statistics, like counters and timers, sent over UDP and sends aggregates to one or more pluggable backend services (e.g., Graphite).
 
-This is a basic writer contributed by [Neil Houston](mailto:neil.houston@and.co.uk).
+This is a basic writer contributed by [Neil Houston](mailto:neil.houston@and.co.uk). The code for this is currently in git and not in any released version of jmxtrans.
 
 Example .json file that outputs HeapMemoryUsage directly to StatsD as a counter:
 
