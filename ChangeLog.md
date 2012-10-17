@@ -1,4 +1,6 @@
-#summary Changelog.
+#ChangeLog
+
+This seems kind of silly to maintain. Please just look at the issues and commits lists.
 
 ## v?
 
