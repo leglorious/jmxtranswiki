@@ -32,7 +32,7 @@ example configuration for for the OutputWriter:
 
 There are three configuration options that are all required in order for RRDToolWriter to work.
 
-  * *templateFile* is the path to the [heapmemory-rrd-template.xml](https://github.com/lookfirst/jmxtrans/blob/master/heapmemory-rrd-template.xml) file which configures the database schema. This file is primarily documented on the [JRobin website](http://oldwww.jrobin.org/api/templatesapi.html) and it mirrors the configuration options for ['rrdtool create'](http://oss.oetiker.ch/rrdtool/doc/rrdcreate.en.html), so I won't go into too much detail here.
+  * *templateFile* is the path to the [heapmemory-rrd-template.xml](https://github.com/jmxtrans/jmxtrans/blob/master/heapmemory-rrd-template.xml) file which configures the database schema. This file is primarily documented on the [JRobin website](http://oldwww.jrobin.org/api/templatesapi.html) and it mirrors the configuration options for ['rrdtool create'](http://oss.oetiker.ch/rrdtool/doc/rrdcreate.en.html), so I won't go into too much detail here.
   * *outputFile* is the path to the rrd database file that will get automatically created if it doesn't already exist.
   * *binaryPath* is the path to the directory that contains the rrdtool binary for your platform. That binary is used to create the database and write data to it. This isn't the most efficient way of doing things, but unfortunately is the easiest option using Java.
   * *debug* is an optional setting that defaults to false. When it is on, it will print out the generated datasource name that you would use in the template.xml file to record the numbers that you want to keep track of. These names are shortened versions of the attribute name initials.

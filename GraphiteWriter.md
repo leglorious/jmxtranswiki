@@ -33,7 +33,7 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
 This produces the following screen shot. It was not necessary to tell
 graphite anything about the 'tree' that was created as it was generated
 automatically by GraphiteWriter.
-[This is the example Java code to generate](https://github.com/lookfirst/jmxtrans/blob/master/src/com/googlecode/jmxtrans/example/Graphite.java) the above json.
+[This is the example Java code to generate](https://github.com/jmxtrans/jmxtrans/blob/master/src/com/googlecode/jmxtrans/example/Graphite.java) the above json.
 
 ![render](http://jmxtrans.googlecode.com/svn/wiki/render.png)
 
