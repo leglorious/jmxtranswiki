@@ -106,6 +106,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     } ],
     "numQueryThreads" : 2
   } ]
+}
 ```
 
 ### Threads (Hostpot)
