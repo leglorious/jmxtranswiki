@@ -8,7 +8,7 @@ jmxtrans is a tool which allows you to connect to any number of Java Virtual Mac
 
 The query language is based on the easy to write [JSON](http://json.org/) format. This allows non-programmers access to JMX without having to know how to write Java. That makes this tool perfect for the busy Ops person.
 
-The results of the queries are processed by Java classes called OutputWriters. These are a bit more involved to write because generally it means integrating Java code with a third party tool such as [Graphite](http://graphite.wikidot.com/) or [Ganglia](http://ganglia.sourceforge.net). Out of the box, jmxtrans supports several output writers and we are encouraging others to suggest new ideas by submitting requests to the [issue tracker](https://github.com/lookfirst/jmxtrans/issues).
+The results of the queries are processed by Java classes called OutputWriters. These are a bit more involved to write because generally it means integrating Java code with a third party tool such as [Graphite](http://graphite.wikidot.com/) or [Ganglia](http://ganglia.sourceforge.net). Out of the box, jmxtrans supports several output writers and we are encouraging others to suggest new ideas by submitting requests to the [issue tracker](https://github.com/jmxtrans/jmxtrans/issues).
 
 ## Engine Mode
 
@@ -32,10 +32,10 @@ On a side note, I've heard from a few people now who are using it to monitor clu
 ## API Mode
 The second mode for jmxtrans is to act as an API to build your own application for pulling data from JMX and writing it out. The Engine was written on top of this API. The Engine is how I'd use this project, but maybe you have other ideas so that is fully supported by allowing you to write your own engine.
 
-jmxtrans uses the amazing [Jackson library](http://jackson.codehaus.org/) to parse json data into a Java object model. This model is primarily represented by the [JmxProcess, Server, Query, Result](https://github.com/lookfirst/jmxtrans/tree/master/src/com/googlecode/jmxtrans/model) objects. This means that if you know a bit of java, it is possible to fully customize your own usage of jmxtrans to however you see fit.
+jmxtrans uses the amazing [Jackson library](http://jackson.codehaus.org/) to parse json data into a Java object model. This model is primarily represented by the [JmxProcess, Server, Query, Result](https://github.com/jmxtrans/jmxtrans/tree/master/src/com/googlecode/jmxtrans/model) objects. This means that if you know a bit of java, it is possible to fully customize your own usage of jmxtrans to however you see fit.
 
-The core of the api is implemented as mostly static methods in the [JmxUtils class](https://github.com/lookfirst/jmxtrans/blob/master/src/com/googlecode/jmxtrans/util/JmxUtils.java). You pass in a Server object with a bunch of Queries and get back a list of Results. How you process those results is up to you.
+The core of the api is implemented as mostly static methods in the [JmxUtils class](https://github.com/jmxtrans/jmxtrans/blob/master/src/com/googlecode/jmxtrans/util/JmxUtils.java). You pass in a Server object with a bunch of Queries and get back a list of Results. How you process those results is up to you.
 
 This also means that you can use Java'ish languages like Jython, Scala and Groovy to script jmxtrans to do whatever you want.
 
-Take a look at the included [example classes](https://github.com/lookfirst/jmxtrans/tree/master/src/com/googlecode/jmxtrans/example). They show how you can either read a json file from disk into the object model or create the object model by hand and execute it. There is also examples of using wildcards, which jmxtrans fully supports with JDK 6.
+Take a look at the included [example classes](https://github.com/jmxtrans/jmxtrans/tree/master/src/com/googlecode/jmxtrans/example). They show how you can either read a json file from disk into the object model or create the object model by hand and execute it. There is also examples of using wildcards, which jmxtrans fully supports with JDK 6.
