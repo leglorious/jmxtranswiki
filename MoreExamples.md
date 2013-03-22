@@ -235,34 +235,6 @@ Some sample JSON, to help you monitor quickly various metrics in :
   } ]
 }
 ```
-### Apache Tomcat 7 AJP/HTTP Pools
-
-```
-{
-  "servers" : [ {
-    "port" : "8004",
-    "host" : "mysys.mydomain",
-    "username" : "monitor",
-    "password" : "monitor!",
-    "queries" : [
-
- {
-      "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
-        "settings" : {
-          "port" : 2003,
-          "host" : "mygraphite.mydomain",
-          "typeNames" : [ "name" ]
-        }
-      } ],
-      "obj" : "Catalina:type=GlobalRequestProcessor=*",
-      "resultAlias": "connectors",
-      "attr" : [ "bytesReceived", "bytesSent", "errorCount", "processingTime", "requestCount", "" ]
-    } ],
-    "numQueryThreads" : 2
-  } ]
-}
-
 ### Apache Tomcat 7 HTTP/AJP Pools and Requests
 
 ```
