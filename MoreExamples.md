@@ -5,7 +5,7 @@
 Some sample JSON, to help you monitor quickly various metrics in : 
 
   * Sun/Oracle Hotspot heap, memory-pools, threads
-  * Apache Tomcat and JBoss App servers AJP/HTTP Pools and DataSources. 
+  * Apache Tomcat 6, 7 and JBoss App servers AJP/HTTP Pools and DataSources. 
 
 ## Graphite Samples
 
@@ -209,7 +209,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 }
 ```
 
-### Apache Tomcat AJP/HTTP Pools
+### Apache Tomcat 6 AJP/HTTP Pools
 
 ```
 {
@@ -234,6 +234,95 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "numQueryThreads" : 2
   } ]
 }
+```
+### Apache Tomcat 7 AJP/HTTP Pools
+
+```
+{
+  "servers" : [ {
+    "port" : "8004",
+    "host" : "mysys.mydomain",
+    "username" : "monitor",
+    "password" : "monitor!",
+    "queries" : [
+
+ {
+      "outputWriters" : [ {
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "settings" : {
+          "port" : 2003,
+          "host" : "mygraphite.mydomain",
+          "typeNames" : [ "name" ]
+        }
+      } ],
+      "obj" : "Catalina:type=GlobalRequestProcessor=*",
+      "resultAlias": "connectors",
+      "attr" : [ "bytesReceived", "bytesSent", "errorCount", "processingTime", "requestCount", "" ]
+    } ],
+    "numQueryThreads" : 2
+  } ]
+}
+
+### Apache Tomcat 7 HTTP/AJP Pools and Requests
+
+```
+{
+ "servers": [
+  {
+    "numQueryThreads": 2,
+    "port" : "8004",
+    "host" : "mysys.mydomain",
+    "username" : "monitor",
+    "password" : "monitor!",
+   "queries": [
+    {
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+       "settings": {
+        "typeNames": [
+         "name"
+        ],
+        "host": "mygraphite.mydomain",
+        "port": 2003
+       }
+      }
+     ],
+     "resultAlias": "tomcat7-connectors",
+     "obj": "Catalina:type=ThreadPool,name=*",
+     "attr": [
+      "currentThreadCount",
+      "currentThreadsBusy"
+     ]
+    },
+    {
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+       "settings": {
+        "typeNames": [
+         "name"
+        ],
+        "host": "mygraphite.mydomain",
+        "port": 2003
+       }
+      }
+     ],
+     "resultAlias": "tomcat7-requests",
+     "obj": "Catalina:type=GlobalRequestProcessor,name=*",
+     "attr": [
+      "bytesReceived",
+      "bytesSent",
+      "errorCount",
+      "processingTime",
+      "requestCount"
+     ]
+    }
+   ]
+  }
+ ]
+}
+
 ```
 
 ### Apache Tomcat DataSources
