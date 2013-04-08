@@ -37,7 +37,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 }
 ```
 
-### Heap (Hostpot)
+### Heap (Hotspot)
 
 ```
 {
@@ -84,7 +84,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 }
 ```
 
-### Memory Pool (Hostpot)
+### Memory Pool (Hotspot)
 
 ```
 {
@@ -109,7 +109,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 }
 ```
 
-### Threads (Hostpot)
+### Threads (Hotspot)
 
 ```
 {
