@@ -8,6 +8,8 @@ Figuring out how to write queries is probably the most difficult part of using j
 
 As you can see, I've marked in red a few areas of note. That is because we are going to create a query for 3 attributes ```"CacheHits", "CacheMisses", "ObjectCount"``` from all of the available caches (there is only one shown ```ClientCache```).
 
+The "obj" field can be discovered by clicking on the MBean itself ( ```ClientCache``` in this case) and selecting the ```ObjectName``` field. As in the example below, you may want to add ```,*``` or ```,name=*```  in order to catch child MBeans.
+
 Here is some example json that queries one server, w2, on port 1099:
 
 ```
