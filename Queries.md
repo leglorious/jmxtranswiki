@@ -67,5 +67,18 @@ If you want a different hostname to show up, use the ```alias``` configuration l
     "port" : "1099",
 ```
 
+## Generating Queries using VisualVM
+
+Some people may find that VisualVM makes it easier to find the required MBean information.
+ 
+In VisualVM:
+
+1. Connect to the Java instance using VisualVM. If it's a remote JVM, you'll need to configure a a "remote host" first, then a JMX Connection.
+2. Open the JMX connection by double-clicking the node in the left-hand pane
+3. Choose the "MBeans" tab in the right tab.
+4. Find the MBEAN you want to monitor (in the center-pane tree)
+5. Click the "Metadata" tab in the right-most pane.
+6. You should see the "ObjectName" under "MBeanInfo". You should be able to copy/paste this into JMXTrans, and choose "atributes" from the "Attributes" tab.
+
 ## Alternative query definition using YAML
 Note that for setups with lots of reused queries, you might profit from using the YAML configuration format described in [[YAMLConfig]]. It allows to specify a query once and apply it to many hosts without repetition.
