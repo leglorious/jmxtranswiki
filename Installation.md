@@ -22,6 +22,7 @@ Notes:
   * Configuration options are stored in: ```/etc/default/jmxtrans```
   * There is an init script in: ```/etc/init.d/jmxtrans``` (this wraps the ```jmxtrans.sh``` discussed below)
   * Put your .json files into: ```/var/lib/jmxtrans```
+  * Presetting the memory: `echo "jmxtrans jmxtrans/jvm_heap_size string 256" | sudo debconf-set-selections`
 
 ## Installing the RPM
 
