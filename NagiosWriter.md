@@ -1,6 +1,10 @@
+#NagiosWriter
 
+## Nagios Writer
 
-Conf example:
+This writer is for Nagios :
+
+`Conf example:
 { "outputWriters" : [ {
 "@class" : "com.googlecode.jmxtrans.model.output.NagiosWriter",
 "settings" : {
@@ -16,7 +20,7 @@ Conf example:
 "obj" : "java.lang:type=Memory",
 "resultAlias": "memory",
 "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage", "" ]
-}
+}`
 
 outputFile - Should be the Nagios command file.
 - Cannot be empty.
