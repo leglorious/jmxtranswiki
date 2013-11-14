@@ -9,7 +9,10 @@ This example should mostly be self-explanatory.
     graphite_port: 2003
 
     # Global port to query JMX on
+    # query_port and global_host_alias are mandatory
+    # Will accept a blank space if alias and host is provided in host sets
     query_port: 5400
+    global_host_alias: 
 
     # Query definitions, every query needs obj, resultAlias, attr
     #   from jmxtrans format, "name" must be given for referencing
@@ -54,9 +57,10 @@ This example should mostly be self-explanatory.
             - "ThreadCount"
             - "TotalStartedThreadCount"
 
-    # Define named sets of hosts that get the same
-    #   queries
+    # Define named sets of hosts that get the same queries
     # query_names and hosts is a list
+    # Mention like machine01.yourdomain.com:5400;mac1
+    # if query_port and global_host_alias are not specified
     sets:
       - setname: set1
         query_names:
