@@ -11,14 +11,15 @@ Metrics are written to OpenTSDB with this writer.
 
 ### Configuration
 
-In the ```outputWriters``` array:
-
+*```outputWriters```*
 * ```@class``` - ```com.googlecode.jmxtrans.model.output.OpenTSDBWriter```
 * settings
-** host - hostname or IP address of the OpenTSDB server
-** port - port of the OpenTSDB server
-** typeNames - list of attribute names from the MBean used to format a dynamic tag for the metric
-** tags - object of constant tag names and values to include with the query
+
+*```settings```*
+* host - hostname or IP address of the OpenTSDB server
+* port - port of the OpenTSDB server
+* typeNames - list of attribute names from the MBean used to format a dynamic tag for the metric
+* tags - object of constant tag names and values to include with the query
 
 
 ### Metric Names and Tags
