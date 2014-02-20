@@ -19,6 +19,7 @@ Metrics are written to OpenTSDB with this writer.
 * host - hostname or IP address of the OpenTSDB server
 * port - port of the OpenTSDB server
 * typeNames - list of attribute names from the MBean used to format a dynamic tag for the metric
+* tagName - name of a tag assigned when a query returns multiple values; defaults to ```type```
 * tags - object of constant tag names and values to include with the query
 
 
@@ -64,6 +65,26 @@ org.apache.activemq:BrokerName=localhost,Type=Queue,Destination=testQueue
 Name = testQueue
 ...
 ```
+
+
+### Multiple Value Queries and the tagName Tag
+
+When a query results in multiple values for a single attribute, such as an attribute containing an array,
+each value is added as a separate metric.
+Additionaly, a tag is added to each metric to uniquely identify each metric data point in the query.
+The name of the tag defaults to ```type``` but can be configured in the settings with the ```tagName``` setting.
+
+Values for tagName depend on the type of complex data in the query result:
+
+* ```CompositeData``` - tagName is the name of the bottom-level data element.
+* ```TabularDataSupport``` - tagName is the name of the bottom-level data element.
+* ```ObjectName[]``` - tagName is the canonical name of the object (using ObjectName.getCanonicalName()).
+* ```Object[]``` - tagName is the name of the attribute with "." and the position in the array appended (e.g. Counts.0).
+
+Note that information in ```CompositeData``` and ```TabularDataSupport``` may be split into multiple attributes
+in the result depending on the hierarchy of data;
+the additional tag is only included when there are multiple values for an individual attribute.
+Please try it out on a target to get a better understanding of the results.
 
 
 
