@@ -4,14 +4,14 @@
 
 This simple writer shares a lot of the code with the GraphiteWriter.
 Instead of writing data to Graphite, it writes the same data to the
-specified outputFile in tab delimited format. This way you can write
-another script which will monitor the data as it is written to the file.
+specified outputFile in a format which is tab delimited by default. The delimiter can be changed by a setting. This way you can write another script which will monitor the data as it is written to the file.
 
 There are three settings for this writer:
 
   * *outputFile* the file to write to
   * *maxLogFileSize* the max size before rolling the file
   * *maxLogBackupFiles* max number of rolled files
+  * *delimiter* the delimiter to use which defaults to a tab
 
 ```
 {
@@ -25,6 +25,7 @@ There are three settings for this writer:
           "outputFile" : "/tmp/keyout2.txt",
           "maxLogFileSize" : "10MB",
           "maxLogBackupFiles" : 200,
+          "delimiter" : "$" 
           "debug" : true,
           "typeNames" : ["name"]
         }
