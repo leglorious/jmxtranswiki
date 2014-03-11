@@ -26,7 +26,8 @@ Metrics are written to OpenTSDB with this writer.
 
 Hostname or IP address of the OpenTSDB server.
 * **Default:** N/A.
-* **Example:** localhost.  **Required**
+* **Example:** localhost.
+* **Required**
 
 
 #### mergeTypeNamesTags
@@ -95,15 +96,26 @@ using the ```metricNamingExpression``` setting.
 
 Below are the variables available for use with JEXL expressions:
 
-| VARIABLE | DESCRIPTION | EXAMPLE USE | EXAMPLE VALUE |
-| --- | --- | --- | --- |
-| alias | Query setting ```resultAlias```, if set. | ```alias``` | ```my.result.alias``` |
-| attribute | Name of the attribute being queried. | ```attribute``` | ```QueueSize``` |
-| class | Effective classname of the MBean - either ```alias```, if defined, or ```realclass``` otherwise. | ```class``` | ```org.apache.activemq.broker.jmx.QueueView``` |
-| realclass | Class name of the MBean. | ```realclass``` | ```org.apache.activemq.broker.jmx.QueueView``` |
-| result | Full ```Result``` object. | ```result.query.attr[0]``` | ```MemoryLimit``` |
-| typename | Map of ObjectName keys to their values for the queried MBean. | ```typename['Type']``` | ```Broker``` |
+|  VARIABLE  |  DESCRIPTION  |
+|  ---  |  ---  |
+|  alias  |  Query setting ```resultAlias```, if set.  |
+|  attribute  |  Name of the attribute being queried.  |
+|  class  |  Effective classname of the MBean - either ```alias```, if defined, or ```realclass``` otherwise.  |
+|  realclass  |  Class name of the MBean.  |
+|  result  |  Full ```Result``` object.  |
+|  typename  |  Map of ObjectName keys to their values for the queried MBean.  |
 
+
+Here are some examples:
+
+|  EXAMPLE USE  |  EXAMPLE VALUE  |
+|  ---  |  ---  |
+|  ```alias```  |  ```my.result.alias```  |
+|  ```attribute```  |  ```QueueSize```  |
+|  ```class```  |  ```org.apache.activemq.broker.jmx.QueueView```  |
+|  ```realclass```  |  ```org.apache.activemq.broker.jmx.QueueView```  |
+|  ```result.query.attr[0]```  |  ```MemoryLimit```  |
+|  ```typename['Type']```  |  ```Broker```  |
 
 
 ### typeNames Tag
