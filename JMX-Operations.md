@@ -1,4 +1,4 @@
-**This Wiki page describes the operation and configuration of code which has not yet been committed to the JMXTrans project.**
+**This Wiki page describes the operation and configuration of code which has not yet been committed to the JMXTrans project.** For reference, please see [#41](https://github.com/jmxtrans/jmxtrans/pull/41)
 
 ## Introduction
 
