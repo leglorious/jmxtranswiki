@@ -1,8 +1,12 @@
-#OpenTSDBWriter
+#TCollectorUDPWriter
 
-## OpenTSDBWriter
+## TCollectorUDPWriter
 
-Metrics are written to OpenTSDB with this writer.
+Metrics are written to OpenTSDB via tcollector, over UDP, with this writer.
+Advantages over directly connecting to OpenTSDB include caching of metrics in case OpenTSDB is down,
+removal of redundant data points, and compression.
+Please refer to the OpenTSDB documentation for more details.
+
 
 ### Limitations
 
@@ -13,7 +17,7 @@ Metrics are written to OpenTSDB with this writer.
 ### Configuration
 
 *```outputWriters```*
-* ```@class``` - ```com.googlecode.jmxtrans.model.output.OpenTSDBWriter```
+* ```@class``` - ```com.googlecode.jmxtrans.model.output.TCollectorUDPWriter```
 * settings
 
 *```settings```*
@@ -24,7 +28,10 @@ Metrics are written to OpenTSDB with this writer.
 
 #### host
 
-Hostname or IP address of the OpenTSDB server.
+Hostname or IP address of the tcollector server.
+Note that it is common to run tcollector on the same server as the application which reduces network traffic
+and improves reliability of the collection process; in that scenario, localhost is used for this setting.
+
 * **Default:** N/A.
 * **Example:** localhost.
 * **Required**
@@ -46,10 +53,10 @@ JEXL expression used to calculate metric names, if defined; see below for more d
 
 #### port
 
-Port number on the OpenTSDB server to which to connect.
+Port number on the tcollector server to which to connect.
 
 * **Default:** N/A.
-* **Example:** 4242.
+* **Example:** 8923.
 * **Required**
 
 
@@ -79,7 +86,7 @@ List of keys from the MBean's object name used to create tags, if defined.  **De
 
 #### Default Naming
 
-The attribute name is appended to the JMX Object class name to form the metric name sent to OpenTSDB.
+The attribute name is appended to the JMX Object class name to form the metric name sent to tcollector.
 Here's an example for ActiveMQ :
 
 ```
@@ -91,7 +98,7 @@ Note that the ```resultAlias``` setting on the Query can be used to change the c
 
 #### JEXL-Based Naming
 
-A JEXL expression can be used to formulate the metric names sent to OpenTSDB for individual results
+A JEXL expression can be used to formulate the metric names sent to tcollector for individual results
 using the ```metricNamingExpression``` setting.
 
 Below are the variables available for use with JEXL expressions:
@@ -237,28 +244,28 @@ Here is an example configuration for use with ActiveMQ.
                 {
                     "outputWriters": [
                         {
-                            "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
+                            "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
                             "settings": {
-                                "host": "tsd1.example.com",
-                                "port": 4242,
+                                "host": "localhost",
+                                "port": 8923,
                                 "typeNames": ["Destination"],
                                 "tags": { "test-tag1" : "test-tag1-value", "test-tag2" : "test-tag2-value" }
                             }
                         },
                         {
-                            "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
+                            "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
                             "settings": {
-                                "host": "tsd2.example.com",
-                                "port": 4242,
+                                "host": "localhost",
+                                "port": 8923,
                                 "typeNames": ["Destination"],
                                 "tags": {}
                             }
                         },
                         {
-                            "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
+                            "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
                             "settings": {
-                                "host": "tsd3.example.com",
-                                "port": 4242,
+                                "host": "localhost",
+                                "port": 8923,
                                 "typeNames": ["Destination"],
                                 "metricNamingExpression": "realclass + '.' + attribute",
                                 "tags": {}
@@ -280,6 +287,6 @@ Here is an example configuration for use with ActiveMQ.
 ```
 
 NOTES:
-* The tsd1.example.com depicts use of resultAlias and custom tags.
-* The tsd2.example.com depicts use of resultAlias without custom tags.
-* The tsd3.example.com depicts use of metricNamingExpression to override the resultAlias for one writer.
+* The first example writer configuration depicts use of resultAlias and custom tags.
+* The second example writer configuration depicts use of resultAlias without custom tags.
+* The third example writer configuration depicts use of metricNamingExpression to override the resultAlias for one writer.

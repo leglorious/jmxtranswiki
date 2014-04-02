@@ -15,4 +15,5 @@
 * ... [[RRDWriter]]
 * ... [[StatsDWriter]]
 * ... [[StdoutWriter]]
+* ... [[TCollectorUDPWriter]]
 * [[BestPractices]]
