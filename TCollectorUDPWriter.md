@@ -3,8 +3,7 @@
 ## TCollectorUDPWriter
 
 Metrics are written to OpenTSDB via tcollector, over UDP, with this writer.
-Advantages over directly connecting to OpenTSDB include caching of metrics in case OpenTSDB is down,
-removal of redundant data points, and compression.
+Advantages over directly connecting to OpenTSDB include buffering of metrics in case OpenTSDB is down and deduplication of redundant data points.
 Please refer to the OpenTSDB documentation for more details.
 
 
