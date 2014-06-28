@@ -1,4 +1,3 @@
-
 Send metrics to [Librato](https://metrics.librato.com/) monitoring metrics service.
 
 * Source: LibratoWriter.java
