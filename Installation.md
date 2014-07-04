@@ -56,7 +56,6 @@ Options you may want to configure:
   * JSON_DIR - Location of your .json files. Defaults to '.'
   * LOG_DIR - Location of where the log files get written. Defaults to '.'
   * SECONDS_BETWEEN_RUNS - How often jobs run. Defaults to 60.
-  * KEEP_DOTS_IN_KEYS - Set to "true" to enable. Defaults to "false". If dots are allowed in JMX keys retrieved (Permissive mode). When set to "false", dots are squashed to underscores (Strict mode).
 
 ## Enabling JMX for a JVM
 
