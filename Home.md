@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![diagram](//jmxtrans.googlecode.com/svn/wiki/diagram.png)
+![diagram](http://jmxtrans.googlecode.com/svn/wiki/diagram.png)
 
 jmxtrans is a tool which allows you to connect to any number of Java Virtual Machines (JVM's) and query them for their attributes without writing a single line of Java code. The attributes are exported from the JVM via [Java Management Extensions (JMX)](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html). Most Java applications have made their statistics available via this protocol and it is possible to add this to any codebase without a lot of effort. If you use the [SpringFramework](http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html) for your code, it can be as easy as just adding a couple of annotations to a Java class file.
 
@@ -18,7 +18,7 @@ For a given json file, there can be an unlimited number of servers defined withi
 
 Within each server, there can be an unlimited number of JMX queries executed against it. Each Query executed against a server can output its results using any number of OutputWriters. jmxtrans includes several different OutputWriters that you can use.
 
-![objmodel](//jmxtrans.googlecode.com/svn/wiki/objmodel.png)
+![objmodel](http://jmxtrans.googlecode.com/svn/wiki/objmodel.png)
 
 The [Queries] expect an object ("java.lang.type=Memory"), zero or more attributes ["HeapMemoryUsage", "NonHeapMemoryUsage"] and one or more OutputWriters to send the Results of the query to. If you don't specify any attributes, then it will get all of them. You can also specify a star within an object name to query dynamically generated object names.
 
