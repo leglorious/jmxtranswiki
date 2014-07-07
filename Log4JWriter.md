@@ -13,7 +13,7 @@ It provides Log4j mapped diagnostic contexts (MDC) for the following variables:
 * key
 * Epoch
 
-We created this writer to send jmxtrans metrics to logstash.
+This writer has been initially created to send jmxtrans metrics to logstash.
 
 ## Configuration
 
