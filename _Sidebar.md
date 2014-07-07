@@ -17,4 +17,5 @@
 * ... [[StdoutWriter]]
 * ... [[TCollectorUDPWriter]]
 * ... [[LibratoWriter]]
+* ... [[Log4JWriter]]
 * [[BestPractices]]
