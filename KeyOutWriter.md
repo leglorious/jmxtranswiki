@@ -25,7 +25,7 @@ There are three settings for this writer:
           "outputFile" : "/tmp/keyout2.txt",
           "maxLogFileSize" : "10MB",
           "maxLogBackupFiles" : 200,
-          "delimiter" : "\t" 
+          "delimiter" : "\t",
           "debug" : true,
           "typeNames" : ["name"]
         }
