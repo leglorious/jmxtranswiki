@@ -18,4 +18,5 @@
 * ... [[TCollectorUDPWriter]]
 * ... [[LibratoWriter]]
 * ... [[Log4JWriter]]
+* ... [[SensuWriter]]
 * [[BestPractices]]
