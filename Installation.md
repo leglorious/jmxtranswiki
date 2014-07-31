@@ -59,7 +59,7 @@ Options you may want to configure:
 
 ## Enabling JMX for a JVM
 
-In order to use jmxtrans, you must first enable Java Management Extensions (JMX) on your Java Virtual Machine (JVM). We recommend that you connect to Java 6 JVM's because there are improvements to the JMX protocol that we can take advantage of, such as wildcard (```*```) queries.
+In order to use jmxtrans, you must first enable Java Management Extensions (JMX) on your Java Virtual Machine (JVM). We recommend that you connect to Java 6 (or greater) JVM's because there are improvements to the JMX protocol that we can take advantage of, such as wildcard (```*```) queries.
 
 For applications behind a firewall that do not need security, add these arguments to the startup of the JVM in order to enable remote JMX connections:
 
@@ -78,7 +78,7 @@ For more details on enabling the agent, please read:
 
 If you are going to use jmxtrans, it is helpful to gain an understanding of JConsole. This is a good visual tool for viewing attributes in a JVM. Using this tool will help you write your jmxtrans queries.
 
-  * [http://download.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html JConsole Documentation]
+  * [JConsole Documentation](http://download.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)
 
 ## Using Ant Vars
 
