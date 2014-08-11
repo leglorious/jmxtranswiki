@@ -14,6 +14,8 @@ But there is no type for metrics in jmxtrans. As gauge seems to be the most used
  * `token`: Librato token. Mandatory.
  * `libratoApiTimeoutInMillis`: read timeout of the calls to Librato HTTP API. Optional, default value: 1000.
  * `source`: Librato . Optional, default value: `#hostname#` (the hostname of the server).
+ * `proxyHost`: Proxy Host. Optional.
+ * `proxyPort`: Proxy Port. Optional.
 
 ## Sample configuration
 
