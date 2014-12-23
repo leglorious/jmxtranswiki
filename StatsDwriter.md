@@ -20,7 +20,7 @@ Example .json file that outputs HeapMemoryUsage directly to StatsD as a counter:
         "@class" : "com.googlecode.jmxtrans.model.output.StatsDWriter",
         "settings" : {
           "port" : 8125,
-          "host" : "192.168.192.133"
+          "host" : "192.168.192.133",
           "bucketType" : "c"
         }
       } ]
