@@ -6,6 +6,7 @@
 * ... [[MoreExamples]]
 * ... [[YAMLConfig]]
 * [[OutputWriters]]
+* ... [[CloudWatchWriter]]
 * ... [[GangliaWriter]]
 * ... [[GraphiteWriter]]
 * ... [[KeyOutWriter]]
