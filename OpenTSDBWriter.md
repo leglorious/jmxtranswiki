@@ -1,8 +1,8 @@
 #OpenTSDBWriter
 
-## OpenTSDBWriter
+## OpenTSDBWriter 
 
-Metrics are written to OpenTSDB with this writer.
+Metrics are written to OpenTSDB with this writer.  Optionally, you may use this writer to write to KairosDB out-of-box without any modification.  Since both KairosDB and OpenTSDB use telnet (line) protocol to push data and format is same.   Please refer to http://opentsdb.net/docs/build/html/user_guide/writing.html [Section Telnet Under Input Method ] and  http://kairosdb.github.io/kairosdocs/PushingData.html#submitting-data-via-telnet
 
 ### Limitations
 
