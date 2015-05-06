@@ -4,7 +4,7 @@
 
 ![diagram](http://jmxtrans.googlecode.com/svn/wiki/diagram.png)
 
-jmxtrans is a tool which allows you to connect to any number of Java Virtual Machines (JVM's) and query them for their attributes without writing a single line of Java code. The attributes are exported from the JVM via [Java Management Extensions (JMX)](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html). Most Java applications have made their statistics available via this protocol and it is possible to add this to any codebase without a lot of effort. If you use the [SpringFramework](http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html) for your code, it can be as easy as just adding a couple of annotations to a Java class file.
+jmxtrans is a tool which allows you to connect to any number of Java Virtual Machines (JVMs) and query them for their attributes without writing a single line of Java code. The attributes are exported from the JVM via [Java Management Extensions (JMX)](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html). Most Java applications have made their statistics available via this protocol and it is possible to add this to any codebase without a lot of effort. If you use the [SpringFramework](http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/jmx.html) for your code, it can be as easy as just adding a couple of annotations to a Java class file.
 
 The query language is based on the easy to write [JSON](http://json.org/) format. This allows non-programmers access to JMX without having to know how to write Java. That makes this tool perfect for the busy Ops person.
 
@@ -14,7 +14,7 @@ The results of the queries are processed by Java classes called OutputWriters. T
 
 There are two primary modes for using jmxtrans. The first is to use the JmxTransformer engine included with the distribution. This engine will read a directory of .json files, process them and then create 'jobs' to execute on a [cron-like schedule](http://www.quartz-scheduler.org/docs/tutorials/crontrigger.html). Each job maps to a server that you would like to query jmx attributes on. Therefore, you can setup a complex query schedule for each server by setting the cronExpression field on the Server object (by default it is every minute).
 
-For a given json file, there can be an unlimited number of servers defined within it. The servers are the JVM's that you want to gather stats from and are defined by a hostname, port, username and password. 
+For a given json file, there can be an unlimited number of servers defined within it. The servers are the JVMs that you want to gather stats from and are defined by a hostname, port, username and password. 
 
 Within each server, there can be an unlimited number of JMX queries executed against it. Each Query executed against a server can output its results using any number of OutputWriters. jmxtrans includes several different OutputWriters that you can use.
 
