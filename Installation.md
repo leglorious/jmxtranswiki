@@ -4,7 +4,7 @@
 
 The first thing you need to do is install jmxtrans. The easiest way is to use the Debian installer. Alternatively, you can install the files included in the .zip into a directory and run it from there.
 
-Once you have it installed, you also need to make sure to enable remote access to JMX on the JVM's that you want to monitor.
+Once you have it installed, you also need to make sure to enable remote access to JMX on the JVMs that you want to monitor.
 
 ## Installing the Debian
 
@@ -14,7 +14,7 @@ To install it:
 
   1. Download the .deb package.
   1. As root: ```dpkg -i jmxtrans_239-1_amd64.deb``` (replace the version number)
-  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVM's you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/default/jmxtrans```.
+  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/default/jmxtrans```.
 
 Notes: 
 
@@ -32,7 +32,7 @@ To install it:
 
   1. Download the .rpm package.
   1. As root: ```rpm -i jmxtrans_239-0.noarch.rpm``` (replace the version number)
-  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVM's you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/sysconfig/jmxtrans```.
+  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/sysconfig/jmxtrans```.
 
 Notes: 
 
@@ -59,7 +59,7 @@ Options you may want to configure:
 
 ## Enabling JMX for a JVM
 
-In order to use jmxtrans, you must first enable Java Management Extensions (JMX) on your Java Virtual Machine (JVM). We recommend that you connect to Java 6 (or greater) JVM's because there are improvements to the JMX protocol that we can take advantage of, such as wildcard (```*```) queries.
+In order to use jmxtrans, you must first enable Java Management Extensions (JMX) on your Java Virtual Machine (JVM). We recommend that you connect to Java 6 (or greater) JVMs because there are improvements to the JMX protocol that we can take advantage of, such as wildcard (```*```) queries.
 
 For applications behind a firewall that do not need security, add these arguments to the startup of the JVM in order to enable remote JMX connections:
 
