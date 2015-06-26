@@ -32,7 +32,7 @@ On a side note, I've heard from a few people now who are using it to monitor clu
 ## API Mode
 The second mode for jmxtrans is to act as an API to build your own application for pulling data from JMX and writing it out. The Engine was written on top of this API. The Engine is how I'd use this project, but maybe you have other ideas so that is fully supported by allowing you to write your own engine.
 
-jmxtrans uses the amazing [Jackson library](http://jackson.codehaus.org/) to parse json data into a Java object model. This model is primarily represented by the [JmxProcess, Server, Query, Result](https://github.com/jmxtrans/jmxtrans/tree/master/jmxtrans-core/src/main/java/com/googlecode/jmxtrans/model) objects. This means that if you know a bit of java, it is possible to fully customize your own usage of jmxtrans to however you see fit.
+jmxtrans uses the amazing [Jackson library](https://github.com/FasterXML/jackson) to parse json data into a Java object model. This model is primarily represented by the [JmxProcess, Server, Query, Result](https://github.com/jmxtrans/jmxtrans/tree/master/jmxtrans-core/src/main/java/com/googlecode/jmxtrans/model) objects. This means that if you know a bit of java, it is possible to fully customize your own usage of jmxtrans to however you see fit.
 
 The core of the api is implemented as mostly static methods in the [JmxUtils class](https://github.com/jmxtrans/jmxtrans/blob/master/jmxtrans-core/src/main/java/com/googlecode/jmxtrans/jmx/JmxUtils.java). You pass in a Server object with a bunch of Queries and get back a list of Results. How you process those results is up to you.
 
