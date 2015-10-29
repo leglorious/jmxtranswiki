@@ -1,6 +1,6 @@
 #GraphiteWriter
 
-## Graphite Writer
+## Graphite Writerd
 
 [Graphite](http://graphite.wikidot.com/) is a very cool graphing
 mechanism that is similar to Cacti, but far easier to setup since you
