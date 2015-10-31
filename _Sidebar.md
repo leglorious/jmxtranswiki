@@ -20,4 +20,5 @@
 * ... [[LibratoWriter]]
 * ... [[Log4JWriter]]
 * ... [[SensuWriter]]
+* ... [[InfluxDBWriter]]
 * [[BestPractices]]
