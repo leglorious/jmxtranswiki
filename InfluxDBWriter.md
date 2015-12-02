@@ -18,9 +18,8 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
       "resultAlias":"jvmMemory",
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory",
-        "port" : 8086,
-        "host" : "127.0.0.1",
-        "database" : "jmxDB
+        "url" : "http://127.0.0.1:8086/",
+        "database" : "jmxDB"
       } ]
     } ]
   } ]
@@ -33,8 +32,7 @@ Query attributes
 * *resultAlias* - This is used as the [measurement](https://influxdb.com/docs/v0.9/concepts/key_concepts.html#measurement) container in the database
 
 Output Writer attributes
-* *host* - The hostname for the InfluxDB server
-* *port* - The port for the InfluxDB server
+* *url* - The URL for the InfluxDB server
 * *database* - The name of the InfluxDB database to write the measurements to (The database is created if it    does not exist)
 
 * *resultTags* (Optional) - An array of JMX attributes to write as tags. All attributes listed below are written as tags by default so this property should only be used in the case where less attributes are required:
