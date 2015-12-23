@@ -24,16 +24,14 @@ If there is demand, future versions of this plugin can support writing to multic
       "obj" : "java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GangliaWriter",
-        "settings" : {
-          "groupName" : "memory",
-          "host" : "10.0.3.16",
-          "port" : 8649,
-          "slope" : "both",
-          "units" : "bytes",
-          "tmax" : 60,
-          "dmax" : 900,
-          "sendMetadata": 5
-        }
+        "groupName" : "memory",
+        "host" : "10.0.3.16",
+        "port" : 8649,
+        "slope" : "both",
+        "units" : "bytes",
+        "tmax" : 60,
+        "dmax" : 900,
+        "sendMetadata": 5
       } ]
     } ]
   } ]
