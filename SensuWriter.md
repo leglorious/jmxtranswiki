@@ -27,3 +27,5 @@ Send metrics to [Sensu](http://sensuapp.org/) monitoring  service.
   } ]
 }
 ```
+
+Note: A new SensuWriterFactory has been created. It should be used in place of the previous SensuWriter.
