@@ -15,11 +15,7 @@ Please refer to the OpenTSDB documentation for more details.
 
 ### Configuration
 
-*```outputWriters```*
 * ```@class``` - ```com.googlecode.jmxtrans.model.output.TCollectorUDPWriter```
-* settings
-
-*```settings```*
 * host
 * mergeTypeNamesTags
 * metricNamingExpression
@@ -244,31 +240,25 @@ Here is an example configuration for use with ActiveMQ.
                     "outputWriters": [
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
-                            "settings": {
-                                "host": "localhost",
-                                "port": 8923,
-                                "typeNames": ["Destination"],
-                                "tags": { "test-tag1" : "test-tag1-value", "test-tag2" : "test-tag2-value" }
-                            }
+                            "host": "localhost",
+                            "port": 8923,
+                            "typeNames": ["Destination"],
+                            "tags": { "test-tag1" : "test-tag1-value", "test-tag2" : "test-tag2-value" }
                         },
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
-                            "settings": {
-                                "host": "localhost",
-                                "port": 8923,
-                                "typeNames": ["Destination"],
-                                "tags": {}
-                            }
+                            "host": "localhost",
+                            "port": 8923,
+                            "typeNames": ["Destination"],
+                            "tags": {}
                         },
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.TCollectorUDPWriter",
-                            "settings": {
-                                "host": "localhost",
-                                "port": 8923,
-                                "typeNames": ["Destination"],
-                                "metricNamingExpression": "realclass + '.' + attribute",
-                                "tags": {}
-                            }
+                            "host": "localhost",
+                            "port": 8923,
+                            "typeNames": ["Destination"],
+                            "metricNamingExpression": "realclass + '.' + attribute",
+                            "tags": {}
                         }
                     ],
                     "resultAlias": "custom.queue.metric.base.name",
