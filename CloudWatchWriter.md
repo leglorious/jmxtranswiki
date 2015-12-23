@@ -25,9 +25,7 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                "outputWriters":[
                   {
                      "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                     "settings":{
-                        "namespace":"jmx"
-                     }
+                      "namespace":"jmx"
                   }
                ]
             },
@@ -41,9 +39,7 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                "outputWriters":[
                   {
                      "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                     "settings":{
-                        "namespace":"jmx"
-                     }
+                      "namespace":"jmx"
                   }
                ]
             },
@@ -57,9 +53,7 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                "outputWriters":[
                   {
                      "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                     "settings":{
-                        "namespace":"jmx"
-                     }
+                      "namespace":"jmx"
                   }
                ]
             }
