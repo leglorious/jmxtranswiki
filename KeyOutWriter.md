@@ -21,14 +21,12 @@ There are three settings for this writer:
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.KeyOutWriter",
-        "settings" : {
-          "outputFile" : "/tmp/keyout2.txt",
-          "maxLogFileSize" : "10MB",
-          "maxLogBackupFiles" : 200,
-          "delimiter" : "\t",
-          "debug" : true,
-          "typeNames" : ["name"]
-        }
+        "outputFile" : "/tmp/keyout2.txt",
+        "maxLogFileSize" : "10MB",
+        "maxLogBackupFiles" : 200,
+        "delimiter" : "\t",
+        "debug" : true,
+        "typeNames" : ["name"]
       } ],
       "obj" : "net.sf.ehcache:type=CacheStatistics,*",
       "attr" : [ "CacheHits", "CacheMisses", "ObjectCount" ]
