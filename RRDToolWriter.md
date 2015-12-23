@@ -17,13 +17,11 @@ example configuration for for the OutputWriter:
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.RRDToolWriter",
-        "settings" : {
-            "templateFile" : "heapmemory-rrd-template.xml",
-            "outputFile" : "target/heap.rrd",
-            "binaryPath" : "/opt/local/bin",
-            "debug" : true,
-            "generate" : true
-        }
+        "templateFile" : "heapmemory-rrd-template.xml",
+        "outputFile" : "target/heap.rrd",
+        "binaryPath" : "/opt/local/bin",
+        "debug" : true,
+        "generate" : true
       } ]
     } ]
   } ]
