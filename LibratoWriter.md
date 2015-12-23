@@ -30,10 +30,8 @@ But there is no type for metrics in jmxtrans. As gauge seems to be the most used
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.LibratoWriter",
-        "settings" : {
-            "username" : "user@example.com",
-            "token" : "af8f7a8500a9d385adf788aeaf24d91449d12cdfeb"
-        }
+        "username" : "user@example.com",
+        "token" : "af8f7a8500a9d385adf788aeaf24d91449d12cdfeb"
       } ]
     } ]
   } ]
