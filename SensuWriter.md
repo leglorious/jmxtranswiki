@@ -20,10 +20,8 @@ Send metrics to [Sensu](http://sensuapp.org/) monitoring  service.
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.SensuWriter",
-        "settings" : {
-            "host" : "localhost",
-            "handler" : "graphite"
-        }
+        "host" : "localhost",
+        "handler" : "graphite"
       } ]
     } ]
   } ]
