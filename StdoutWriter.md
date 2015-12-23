@@ -13,25 +13,19 @@ This is an example of the configuration for 3 different queries, writing to StdO
     "host" : "w2",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter",
-        "settings" : {
-        }
+        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter"
       } ],
       "obj" : "java.lang:type=Memory",
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ]
     }, {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter",
-        "settings" : {
-        }
+        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter"
       } ],
       "obj" : "java.lang:name=CMS Old Gen,type=MemoryPool",
       "attr" : [ "Usage" ]
     }, {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter",
-        "settings" : {
-        }
+        "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter"
       } ],
       "obj" : "java.lang:name=ConcurrentMarkSweep,type=GarbageCollector",
       "attr" : [ "LastGcInfo" ]
