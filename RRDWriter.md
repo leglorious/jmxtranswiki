@@ -21,10 +21,8 @@ You specify the path to the template file and the output rrd file.
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.RRDWriter",
-        "settings" : {
-            "templateFile" : "heapmemory-rrd-template.xml",
-            "outputFile" : "target/heap.rrd",
-        }
+        "templateFile" : "heapmemory-rrd-template.xml",
+        "outputFile" : "target/heap.rrd",
       } ]
     } ]
   } ]
