@@ -10,7 +10,6 @@
 * ... [[GangliaWriter]]
 * ... [[GraphiteWriter]]
 * ... [[KeyOutWriter]]
-* ... [[MetricsdWriter]]
 * ... [[OpenTSDBWriter]]
 * ... [[RRDToolWriter]]
 * ... [[RRDWriter]]
