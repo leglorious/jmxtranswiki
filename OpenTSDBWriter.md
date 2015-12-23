@@ -12,11 +12,7 @@ Metrics are written to OpenTSDB with this writer.  Optionally, you may use this 
 
 ### Configuration
 
-*```outputWriters```*
 * ```@class``` - ```com.googlecode.jmxtrans.model.output.OpenTSDBWriter```
-* settings
-
-*```settings```*
 * host
 * mergeTypeNamesTags
 * metricNamingExpression
@@ -238,31 +234,25 @@ Here is an example configuration for use with ActiveMQ.
                     "outputWriters": [
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
-                            "settings": {
-                                "host": "tsd1.example.com",
-                                "port": 4242,
-                                "typeNames": ["Destination"],
-                                "tags": { "test-tag1" : "test-tag1-value", "test-tag2" : "test-tag2-value" }
-                            }
+                              "host": "tsd1.example.com",
+                              "port": 4242,
+                              "typeNames": ["Destination"],
+                              "tags": { "test-tag1" : "test-tag1-value", "test-tag2" : "test-tag2-value" }
                         },
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
-                            "settings": {
-                                "host": "tsd2.example.com",
-                                "port": 4242,
-                                "typeNames": ["Destination"],
-                                "tags": {}
-                            }
+                            "host": "tsd2.example.com",
+                            "port": 4242,
+                            "typeNames": ["Destination"],
+                            "tags": {}
                         },
                         {
                             "@class": "com.googlecode.jmxtrans.model.output.OpenTSDBWriter",
-                            "settings": {
-                                "host": "tsd3.example.com",
-                                "port": 4242,
-                                "typeNames": ["Destination"],
-                                "metricNamingExpression": "realclass + '.' + attribute",
-                                "tags": {}
-                            }
+                            "host": "tsd3.example.com",
+                            "port": 4242,
+                            "typeNames": ["Destination"],
+                            "metricNamingExpression": "realclass + '.' + attribute",
+                            "tags": {}
                         }
                     ],
                     "resultAlias": "custom.queue.metric.base.name",
