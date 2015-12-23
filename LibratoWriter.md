@@ -29,7 +29,7 @@ But there is no type for metrics in jmxtrans. As gauge seems to be the most used
       "resultAlias": "jvm.memory",
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.LibratoWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.LibratoWriterFactory",
         "username" : "user@example.com",
         "token" : "af8f7a8500a9d385adf788aeaf24d91449d12cdfeb"
       } ]
@@ -37,3 +37,4 @@ But there is no type for metrics in jmxtrans. As gauge seems to be the most used
   } ]
 }
 ```
+Note: A new LibratoWriterFactory has been created. It should be used in place of the previous LibratoWriter. This new OutputWriter introduces more modular code, standardized way of doing HTTP requests and a few other internal goodies.
