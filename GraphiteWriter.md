@@ -19,11 +19,9 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
       "obj" : "java.lang:type=Memory",
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
-        "settings" : {
-          "port" : 2003,
-          "host" : "192.168.192.133"
-        }
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
+        "port" : 2003,
+        "host" : "192.168.192.133"
       } ]
     } ]
   } ]
@@ -33,10 +31,11 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
 This produces the following screen shot. It was not necessary to tell
 graphite anything about the 'tree' that was created as it was generated
 automatically by GraphiteWriter.
-[This is the example Java code to generate](https://github.com/jmxtrans/jmxtrans/blob/master/src/com/googlecode/jmxtrans/example/Graphite.java) the above json.
 
 ![render](http://jmxtrans.googlecode.com/svn/wiki/render.png)
 
 If you add ```"rootPrefix":"my.root.prefix"```, to the "settings"
 section of the configuration, then it will prepend the value to the
 graphite 'tree' in place of what is now "servers".
+
+Note: A new [GraphiteWriterFactory](https://github.com/jmxtrans/jmxtrans/blob/master/jmxtrans-output/jmxtrans-output-core/src/main/java/com/googlecode/jmxtrans/model/output/GraphiteWriterFactory.java#L57) has been created. It should be used in place of the previous GraphiteWriter. This new OutputWriter introduces a new pool for TCP connections and more modular code.
