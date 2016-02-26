@@ -21,7 +21,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
@@ -46,7 +46,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
@@ -57,7 +57,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ]
     }, {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
@@ -68,7 +68,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
       "attr" : [ "Usage" ]
     }, {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -93,7 +93,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -118,7 +118,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
@@ -142,7 +142,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -167,7 +167,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -192,7 +192,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "host" : "mysys.mydomain",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -220,7 +220,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "password" : "monitor!",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
@@ -250,7 +250,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     {
      "outputWriters": [
       {
-       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
        "settings": {
         "typeNames": [
          "name"
@@ -270,7 +270,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     {
      "outputWriters": [
       {
-       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
        "settings": {
         "typeNames": [
          "name"
@@ -308,7 +308,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "password" : "monitor!",
     "queries" : [ {
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
         "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
