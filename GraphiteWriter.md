@@ -39,3 +39,8 @@ section of the configuration, then it will prepend the value to the
 graphite 'tree' in place of what is now "servers".
 
 Note: A new [GraphiteWriterFactory](https://github.com/jmxtrans/jmxtrans/blob/master/jmxtrans-output/jmxtrans-output-core/src/main/java/com/googlecode/jmxtrans/model/output/GraphiteWriterFactory.java#L57) has been created. It should be used in place of the previous GraphiteWriter. This new OutputWriter introduces a new pool for TCP connections and more modular code.
+
+Note: The "settings" property (found in original GraphiteWriter) has been deprecated and is replaced by direct
+attributes. Old output writers should log a warning and still parse
+the settings (so as not to break compatibility), new output writers do
+not even try to have a settings attribute.
