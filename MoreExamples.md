@@ -22,10 +22,8 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
-        }
       } ],
       "obj" : "java.lang:type=OperatingSystem",
       "attr" : [ "SystemLoadAverage", "AvailableProcessors", "TotalPhysicalMemorySize", 
@@ -47,10 +45,8 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
-        }
       } ],
       "obj" : "java.lang:type=Memory",
       "resultAlias": "heap",
@@ -58,10 +54,8 @@ Some sample JSON, to help you monitor quickly various metrics in :
     }, {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
-        }
       } ],
       "obj" : "java.lang:name=CMS Old Gen,type=MemoryPool",
       "resultAlias": "cmsoldgen",
@@ -69,11 +63,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     }, {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "java.lang:type=GarbageCollector,name=*",
       "resultAlias": "gc",
@@ -94,11 +86,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "java.lang:type=MemoryPool,name=*",
       "resultAlias": "memorypool",
@@ -119,10 +109,8 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain"
-        }
       } ],
       "obj" : "java.lang:type=Threading",
       "resultAlias": "threads",
@@ -143,11 +131,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "jboss.web:type=ThreadPool,name=*",
       "resultAlias": "connectors",
@@ -168,11 +154,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "jboss.web:type=GlobalRequestProcessor,name=*",
       "resultAlias": "requests",
@@ -193,11 +177,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
 	  "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "jboss.jca:service=ManagedConnectionPool,name=*",
       "resultAlias": "datasources",
@@ -221,11 +203,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "Catalina:type=ThreadPool,name=*",
       "resultAlias": "connectors",
@@ -251,13 +231,11 @@ Some sample JSON, to help you monitor quickly various metrics in :
      "outputWriters": [
       {
        "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-       "settings": {
         "typeNames": [
          "name"
         ],
         "host": "mygraphite.mydomain",
         "port": 2003
-       }
       }
      ],
      "resultAlias": "tomcat7-connectors",
@@ -271,13 +249,11 @@ Some sample JSON, to help you monitor quickly various metrics in :
      "outputWriters": [
       {
        "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-       "settings": {
         "typeNames": [
          "name"
         ],
         "host": "mygraphite.mydomain",
         "port": 2003
-       }
       }
      ],
      "resultAlias": "tomcat7-requests",
@@ -309,11 +285,9 @@ Some sample JSON, to help you monitor quickly various metrics in :
     "queries" : [ {
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriterFactory",
-        "settings" : {
           "port" : 2003,
           "host" : "mygraphite.mydomain",
           "typeNames" : [ "name" ]
-        }
       } ],
       "obj" : "Catalina:type=DataSource,class=javax.sql.DataSource,name=*",
       "resultAlias": "datasources",
