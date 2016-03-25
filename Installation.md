@@ -96,10 +96,8 @@ Ant like variables could be used in json files since *v239*, so you could avoid 
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
-        "settings" : {
           "port" : 2003,
           "host" : "192.168.192.133"
-        }
       } ]
     } ]
   } ]
@@ -118,10 +116,8 @@ Ant like variables could be used in json files since *v239*, so you could avoid 
       "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
-        "settings" : {
           "port" : "${mygraphiteport}",
           "host" : "${mygraphitehost}"
-        }
       } ]
     } ]
   } ]
