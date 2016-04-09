@@ -21,3 +21,4 @@
 * ... [[SensuWriter]]
 * ... [[InfluxDBWriter]]
 * [[BestPractices]]
+* [[Thanks]]
