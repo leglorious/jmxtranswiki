@@ -12,7 +12,7 @@ There is a .deb file which you can download and install on an Ubuntu/Debian mach
 
 To install it:
 
-  1. [Download](https://github.com/jmxtrans/jmxtrans/downloads) the .deb package.
+  1. [Download] the .deb package.
   1. As root: ```dpkg -i jmxtrans_239-1_amd64.deb``` (replace the version number)
   1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/default/jmxtrans```.
 
@@ -30,7 +30,7 @@ There is a .rpm file which you can download and install on an Fedora/CentOS/RHEL
 
 To install it:
 
-  1. [Download](https://github.com/jmxtrans/jmxtrans/downloads) the .rpm package.
+  1. [Download] the .rpm package.
   1. As root: ```rpm -i jmxtrans_239-0.noarch.rpm``` (replace the version number)
   1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/sysconfig/jmxtrans```.
 
@@ -133,3 +133,5 @@ Variables should be provided via -D for example via JMXTRANS_OPTS in jmxtrans.co
 ```
 JMXTRANS_OPTS="-Dmyserverport=1099 -Dmyserverhost=w2 -Dmygraphiteport=2003 -Dmygraphitehost=192.168.192.133"
 ```
+
+[Download]: http://central.maven.org/maven2/org/jmxtrans/jmxtrans/
