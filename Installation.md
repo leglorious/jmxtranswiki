@@ -32,13 +32,14 @@ To install it:
 
   1. [Download] the .rpm package.
   1. As root: ```rpm -i jmxtrans_239-0.noarch.rpm``` (replace the version number)
-  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase this value by editing ```/etc/sysconfig/jmxtrans```.
+  1. Enter in the JVM heap size you want: 512 (megs) is the default. The more JVMs you need to monitor, the more memory you will probably need. If you are getting OutOfMemoryError's, then increase `wrapper.java.memory` by editing ```/etc/jmxtrans/wrapper.conf```.
 
 Notes: 
 
   * The application is installed in: ```/usr/share/jmxtrans```
-  * Configuration options are stored in: ```/etc/sysconfig/jmxtrans```
-  * There is an init script in: ```/etc/init.d/jmxtrans``` (this wraps the ```jmxtrans.sh``` discussed below)
+  * The RPM uses [JSW](http://wrapper.tanukisoftware.com/doc/english/introduction.html)
+  * Configuration options are stored in: ```/etc/jmxtrans/wrapper.conf```
+  * There is an init script in: ```/etc/init.d/jmxtrans```
   * Put your .json files into: ```/var/lib/jmxtrans```
 
 ## Running Jmx Transformer
