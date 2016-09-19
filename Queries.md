@@ -80,7 +80,7 @@ In VisualVM:
 3. Choose the "MBeans" tab in the right tab.
 4. Find the MBEAN you want to monitor (in the center-pane tree)
 5. Click the "Metadata" tab in the right-most pane.
-6. You should see the "ObjectName" under "MBeanInfo". You should be able to copy/paste this into JMXTrans, and choose "atributes" from the "Attributes" tab.
+6. You should see the "ObjectName" under "MBeanInfo". You should be able to copy/paste this into JMXTrans, and choose "attributes" from the "Attributes" tab.
 
 ## Alternative query definition using YAML
 Note that for setups with lots of reused queries, you might profit from using the YAML configuration format described in [[YAMLConfig]]. It allows to specify a query once and apply it to many hosts without repetition.
