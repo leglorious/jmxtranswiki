@@ -4,7 +4,7 @@
 
 Figuring out how to write queries is probably the most difficult part of using jmxtrans, but once you get the hang of it, it really isn't that difficult. Below is an image of JConsole looking at the metrics provided by Ehcache which is a commonly used object caching library for Java.
 
-![pic](http://jmxtrans.googlecode.com/svn/wiki/ehcache-example.png)
+![pic](https://raw.githubusercontent.com/jmxtrans/jmxtrans/master/src/site/images/ehcache-example.png)
 
 As you can see, I've marked in red a few areas of note. That is because we are going to create a query for 3 attributes ```"CacheHits", "CacheMisses", "ObjectCount"``` from all of the available caches (there is only one shown ```ClientCache```).
 
