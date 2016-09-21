@@ -32,7 +32,7 @@ This produces the following screen shot. It was not necessary to tell
 graphite anything about the 'tree' that was created as it was generated
 automatically by GraphiteWriter.
 
-![render](http://jmxtrans.googlecode.com/svn/wiki/render.png)
+![render](https://raw.githubusercontent.com/jmxtrans/jmxtrans/master/src/site/images/render.png)
 
 If you add ```"rootPrefix":"my.root.prefix"```, to the "settings"
 section of the configuration, then it will prepend the value to the
