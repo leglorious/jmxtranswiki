@@ -6,7 +6,7 @@
 
 jmxtrans has a writer that connects to a gmond (not gmetad!) process and writes data directly to it using UDP. One nice feature of Ganglia is that you do not need to configure it when you add new hosts.
 
-![ganglia](http://jmxtrans.googlecode.com/svn/wiki/ganglia.png)
+![ganglia](https://raw.githubusercontent.com/jmxtrans/jmxtrans/master/src/site/images/ganglia.png)
 
 As described in the (borrowed) image above, you can see that jmxtrans is writing data to a gmond instance. Since I support host spoofing, whatever is set as ```host``` or optionally ```alias``` is what is sent to Ganglia as the host. Thus, jmxtrans is effectively acting like a gmond instance itself. This also means that jmxtrans doesn't have to run on the same machine as the gmond instance.  Note that for proper host spoofing Ganglia compares both the name of the host and the IP address associated with it.  The GangliaWriter will attempt to resolve the address of the host (or alias) for you.  If this does not work you can correctly spoof Ganglia by providing an ```alias``` value in the form that it expects, specifically IP:hostname (e.g. "10.10.10.3:myhost").
 
