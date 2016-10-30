@@ -24,7 +24,7 @@ Example json query that outputs JVMMemory values to Telegraf in StatsD form with
     "@class" : "com.googlecode.jmxtrans.model.output.StatsDTelegrafWriterFactory",
     "port" : 8125,
     "host" : "localhost",
-    "tags" : { "instance" : "tomcat01" },
+    "tags" : { "instance" : "qa1" },
     "bucketType" : "c,c,c"
   }]
 }
