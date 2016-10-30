@@ -14,6 +14,7 @@
 * ... [[RRDToolWriter]]
 * ... [[RRDWriter]]
 * ... [[StatsDWriter]]
+* ... [[StatsDTelegrafWriter]]
 * ... [[StdoutWriter]]
 * ... [[TCollectorUDPWriter]]
 * ... [[LibratoWriter]]
