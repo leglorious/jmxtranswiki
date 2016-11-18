@@ -35,6 +35,8 @@ Query attributes
 
 Output Writer attributes
 * *url* - The URL for the InfluxDB server
+* *username* - The username for InfluxDB
+* *password* - The password for InfluxDB
 * *database* - The name of the InfluxDB database to write the measurements to (The database is created if it    does not exist)
 
 * *resultTags* (Optional) - An array of JMX attributes to write as tags. All attributes listed below are written as tags by default so this property should only be used in the case where less attributes are required:
