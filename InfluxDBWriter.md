@@ -19,6 +19,8 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
       "outputWriters" : [ {
         "@class" : "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory",
         "url" : "http://127.0.0.1:8086/",
+        "username" : "admin",
+        "password" : "admin",
         "database" : "jmxDB"
       } ]
     } ]
