@@ -65,7 +65,9 @@ This writer has been initially created to send jmxtrans metrics to logstash.
     <logger name="org.quartz">
         <level value="warn"/>
     </logger>
-    <logger name="Log4JWriter">
+
+    <!-- additivity false prevents parent (root) loggers from receiving "duplicate" INFO messages from Log4JWriter -->
+    <logger name="Log4JWriter" additivity="false">
         <level value="INFO"/>
         <appender-ref ref="Log4JWriterAppender"/>
         <appender-ref ref="Log4JWriterSocketAppender"/>
