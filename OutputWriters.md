@@ -2,7 +2,7 @@
 
 ## Writing Results
 
-OutputWriter's are very powerful. They allow you to easily transform your Queries into whatever format you want. This allows sysadmins who may not be Java experts to quickly and easily add graphing of any Java system without writing code.
+OutputWriters are very powerful. They allow you to easily transform your Queries into whatever format you want. This allows sysadmins who may not be Java experts to quickly and easily add graphing of any Java system without writing code.
 
 *The recommended way to use jmxtrans is to use the GraphiteWriter or GangliaWriter over the RRDToolWriter*. 
 
