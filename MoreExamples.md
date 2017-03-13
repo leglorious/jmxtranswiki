@@ -14,7 +14,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### System (Hotspot)
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -37,7 +37,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### Heap (Hotspot)
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -78,7 +78,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### Memory Pool (Hotspot)
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -101,7 +101,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### Threads (Hotspot)
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -123,7 +123,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### JBoss AJP/HTTP Pools
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -146,7 +146,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### JBoss HTTP Requests
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -169,7 +169,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### JBoss DataSources
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -193,7 +193,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### Apache Tomcat 6 AJP/HTTP Pools
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
@@ -217,7 +217,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 ```
 ### Apache Tomcat 7 HTTP/AJP Pools and Requests
 
-```
+```json
 {
  "servers": [
   {
@@ -275,7 +275,7 @@ Some sample JSON, to help you monitor quickly various metrics in :
 
 ### Apache Tomcat DataSources
 
-```
+```json
 {
   "servers" : [ {
     "port" : "8004",
