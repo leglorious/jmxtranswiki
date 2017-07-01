@@ -21,7 +21,8 @@ Here is an example .json file that outputs HeapMemoryUsage and NonHeapMemoryUsag
         "url" : "http://127.0.0.1:8086/",
         "username" : "admin",
         "password" : "admin",
-        "database" : "jmxDB"
+        "database" : "jmxDB",
+        "tags"     : {"application" : "kafka"}
       } ]
     } ]
   } ]
@@ -56,3 +57,5 @@ Output Writer attributes
  * QUORUM = Write succeeds only if write reached a quorum of cluster
 
 Note: Clustering is still under development for InfluxDB but these are write settings that are provided by the Influx DB [Java Client](https://github.com/influxdb/influxdb-java) the source can be found [here](https://github.com/influxdb/influxdb-java/blob/ee202ea5a55c1073d84e5eaf00c672076f204f65/src/main/java/org/influxdb/InfluxDB.java)
+
+* *tags* (Optional) - A dictionary of tag names and values (for more info on tags see [InfluxDB docs](https://docs.influxdata.com/influxdb/v1.2/concepts/glossary/#tag)).
