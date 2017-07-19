@@ -21,5 +21,6 @@
 * ... [[Log4JWriter]]
 * ... [[SensuWriter]]
 * ... [[InfluxDBWriter]]
+* ... [[GelfWriter]]
 * [[BestPractices]]
 * [[Thanks]]
