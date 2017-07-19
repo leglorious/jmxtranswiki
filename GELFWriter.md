@@ -1,6 +1,4 @@
-# GELFWriter
-
-## Introduction
+# Introduction
 
 [Graylog](https://www.graylog.org/) is an advanced log collector and analytics platform. While there are several possible data collectors (so-called "Inputs") available for the platform, Graylog comes with its own, optimized log format called ["GELF"](http://docs.graylog.org/en/latest/pages/gelf.html). GELF is basically optimized JSON with a set of default attributes that is directly delivered to the Graylog input using UDP or TCP.
 
@@ -10,7 +8,7 @@ The jmxtrans GELFWriter converts the queried results to GELF format, using the k
 
 You can (and should) add additional fields in the GELFWriter-configuration, so that you can identify the log messages and put them in the right stream.
 
-## Example Configuration
+# Example Configuration
 
 ```json
 {
