@@ -22,5 +22,6 @@
 * ... [[SensuWriter]]
 * ... [[InfluxDBWriter]]
 * ... [[GelfWriter]]
+* [SSL](https://github.com/jmxtrans/jmxtrans/wiki/JMXRMI-over-SSL)
 * [[BestPractices]]
 * [[Thanks]]
