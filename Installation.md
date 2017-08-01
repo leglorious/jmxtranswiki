@@ -62,11 +62,13 @@ Options you may want to configure:
 
 In order to use jmxtrans, you must first enable Java Management Extensions (JMX) on your Java Virtual Machine (JVM). We recommend that you connect to Java 6 (or greater) JVMs because there are improvements to the JMX protocol that we can take advantage of, such as wildcard (```*```) queries.
 
-For applications behind a firewall that do not need security, add these arguments to the startup of the JVM in order to enable remote JMX connections:
+For applications that are secured and isolated through other means (i.e. IPSEC in tunnel mode), add these arguments to the startup of the JVM in order to enable remote JMX connections:
 
 ```
 -Dcom.sun.management.jmxremote.port=1105 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
 ```
+
+> **NOTE**: Note that JMX remoting uses Java deserialization, and so is vulnerable to [CVE-2016-3427](  http://engineering.pivotal.io/post/java-deserialization-jmx/) if you are using a JVM before 8u91.  You should not consider the application secure if it is behind a firewall, because attackers typically attack from behind the firewall using compromised machines, a technique known as pivoting.
 
 You should set the port number to any free port number on your machine that is above 1024.
 
