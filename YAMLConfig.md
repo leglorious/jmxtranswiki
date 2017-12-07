@@ -28,7 +28,7 @@ servers:
           - FreePhysicalMemorySize
           - FreeSwapSpaceSize
           - OpenFileDescriptorCount
-    numQueryThreads" : 2
+    numQueryThreads : 2
 ```
 
 is the same as this JSON confifuration file
