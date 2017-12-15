@@ -1,6 +1,7 @@
 ## Content
 
 * [[Installation]]
+* [[Configuration]]
 * [[ChangeLog]]
 * [[Queries]]
 * ... [[MoreExamples]]
