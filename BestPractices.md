@@ -1,6 +1,4 @@
-#Best Practices
-
-## Best Practices
+# Best Practices
 
 ## JSON Organization
 
