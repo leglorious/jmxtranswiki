@@ -1,6 +1,4 @@
-#StdoutWriter
-
-## Standard Out Writer
+# Standard Out Writer
 
 This is a basic writer that just prints the list of Results from a Query to System.out (sysout). This makes debugging your Queries a lot easier because you can see what the results look like.
 
