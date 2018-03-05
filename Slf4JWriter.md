@@ -20,7 +20,7 @@ It provides SLF4J mapped diagnostic contexts (MDC) for the following variables:
 * key
 * epoch
 
-These variables can then be used in the Logback configuration to tune the log format:
+These variables can then be used in the [Logback](https://logback.qos.ch/manual/layouts.html#ClassicPatternLayout) configuration to tune the log format:
 ```
 <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender"> 
   <layout>
