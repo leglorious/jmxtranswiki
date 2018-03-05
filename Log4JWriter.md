@@ -1,4 +1,6 @@
-#Log4JWriter
+# Log4JWriter
+
+This writer is deprecated, use [Slf4JWriter](Slf4JWriter)
 
 ## Log4JWriter
 
