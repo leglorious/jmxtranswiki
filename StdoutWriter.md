@@ -32,3 +32,21 @@ This is an example of the configuration for 3 different queries, writing to StdO
   } ]
 }
 ```
+
+## Result Serializers
+
+You can plug a `ResultSerializer` in the `StdOutWriter` to customize how the query result is formatted:
+```
+{
+  "@class" : "com.googlecode.jmxtrans.model.output.StdOutWriter"
+  "resultSerializer": {
+    "@class": "com.googlecode.jmxtrans.model.output.ToStringResultSerializer",
+    "verbose": false
+  }
+}
+```
+
+You can choose among basic `ResultSerializer` implementations:
+* `ToStringResultSerializer` is the default one and is mostly used for debugging purpose. It has a `verbose` flag to print more information.
+* `KeyValueResultSerializer` print result in the form key=value where the key is built using MBean Id, attribute name...
+* Your own.
