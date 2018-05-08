@@ -19,7 +19,7 @@ You can (and should) add additional fields in the GELFWriter-configuration, so t
     "queries" : [ {
       "obj" : "java.lang:type=GarbageCollector,name=ConcurrentMarkSweep",
       "outputWriters" : [ {
-        "@class" : "com.googlecode.jmxtrans.model.output.gelf.GelfWriter",
+        "@class" : "com.googlecode.jmxtrans.model.output.gelf.GelfWriterFactory",
         "host" : "10.0.3.16",
         "port" : 12201,
         "additionalFields": {
