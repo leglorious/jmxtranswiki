@@ -1,4 +1,4 @@
-#How to write queries
+# How to write queries
 
 ## Generating Queries
 
