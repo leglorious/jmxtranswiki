@@ -1,8 +1,8 @@
-#NagiosWriter
+# NagiosWriter
 
 ## Nagios Writer
 
-This writer is for Nagios :
+This writer is for Nagios:
 
 ##  Conf example:
 
