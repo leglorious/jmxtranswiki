@@ -30,12 +30,15 @@ This writer is for Nagios:
 * prefix - Used in the service name to prefix the service description. `OPTIONAL`
 * posfix - Used in the service name to posfix the service description. `OPTIONAL`
 * filters - Attr that should be used as a service name. `REQUIRED`
+
 Attr HeapMemoryUsage can create 3 outputs:
-- HeapMemoryUsage_used
-- HeapMemoryUsage_min
-- HeapMemoryUsage_max
+`HeapMemoryUsage_used`
+`HeapMemoryUsage_min`
+`HeapMemoryUsage_max`
+
 For each one that you want to send to Nagios you must include it on filters.
 * thresholds - It defines the threshold for each filter using the Nagios range definition. `REQUIRED`
+
 Syntax:
 Each threshold has two parts 'warning,critical'
 Each part can contain a range definition.
