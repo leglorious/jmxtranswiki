@@ -34,7 +34,8 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                            },{
                               "name":"SomeKey",
                               "value":"SomeValue"
-                           }]
+                           }
+                        ]
                      }
                   }
                ]
