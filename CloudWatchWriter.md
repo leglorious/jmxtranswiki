@@ -25,7 +25,17 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                "outputWriters":[
                   {
                      "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                      "namespace":"jmx"
+                     "settings":{
+                        "namespace":"jmx",
+                        "dimensions":[
+                           {
+                              "name":"InstanceId",
+                              "value":"$InstanceId"
+                           },{
+                              "name":"SomeKey",
+                              "value":"SomeValue"
+                           }]
+                     }
                   }
                ]
             },
