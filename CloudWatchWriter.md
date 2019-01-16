@@ -12,9 +12,9 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
 {
    "servers":[
       {
-         "alias":"jmxtrans_test",
+         "alias":"testhost",
          "host":"localhost",
-         "port":"5566",
+         "port":"1105",
          "queries":[
             {
                "obj":"java.lang:type=OperatingSystem",
@@ -34,37 +34,8 @@ jmxtrans has a writer that connects to CloudWatch using the AWS Java SDK and wri
                            },{
                               "name":"SomeKey",
                               "value":"SomeValue"
-                           }
-                        ]
+                           }]
                      }
-                  }
-               ]
-            },
-            {
-               "obj":"java.lang:type=Memory",
-               "attr":[
-                  "HeapMemoryUsage",
-                  "NonHeapMemoryUsage"
-               ],
-               "resultAlias":"jvm.heap",
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                      "namespace":"jmx"
-                  }
-               ]
-            },
-            {
-               "obj":"java.lang:type=GarbageCollector,name=*",
-               "attr":[
-                  "CollectionCount",
-                  "CollectionTime"
-               ],
-               "resultAlias":"jvm.gc",
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.CloudWatchWriter",
-                      "namespace":"jmx"
                   }
                ]
             }
